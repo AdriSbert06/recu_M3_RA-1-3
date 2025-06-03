@@ -1,4 +1,4 @@
-package org.example
+package org.example.RA_1_3
 
 import java.util.Scanner
 
