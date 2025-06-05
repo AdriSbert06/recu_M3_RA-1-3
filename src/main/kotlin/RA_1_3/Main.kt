@@ -40,8 +40,8 @@ fun main() {
         when (opcio) {
             "1" -> {
                 println("Has escollit la opcio 1:")
-                for (i in taula.indices) {
-                    println("Fila ${i + 1}:")
+                for (i in 0 until taula.size) {
+                    print("Fila ${i + 1}:")
                     for (j in taula[i].indices) {
                         print("${taula[i][j]} ")
                     }

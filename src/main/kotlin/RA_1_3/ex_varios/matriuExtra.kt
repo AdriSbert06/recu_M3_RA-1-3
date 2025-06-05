@@ -105,11 +105,11 @@ fun main(){
             5 ->{
                 println("Has escollit - Veure Sala")
                 for (fila in matriu.indices){
-                    println("Fila: ${fila + 1}")
+                    print("Fila: ${fila + 1} ")
                     for (j in matriu[fila].indices){
-                        println("${matriu[fila][j]}")
-
+                        print("${matriu[fila][j]}")
                     }
+                    println()
                 }
             }
 
