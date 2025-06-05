@@ -1,5 +1,10 @@
 package RA_5_6
 
+import Utils.RESET
+import Utils.WHITE_BRIGHT
+import Utils.readInt
+import Utils.readWord
+
 fun Glossari() {
 
     println("""
@@ -13,7 +18,8 @@ fun Glossari() {
     """.trimIndent())
 
     do {
-        val opcio: Int = readInt("${WHITE_BRIGHT}Escriu una opció del menu${RESET}", "Error","Ha de ser un numero", 1,5)
+        val opcio: Int =
+            readInt("${WHITE_BRIGHT}Escriu una opció del menu${RESET}", "Error", "Ha de ser un numero", 1, 5)
 
         when (opcio) {
             1->{
@@ -68,7 +74,7 @@ fun opcio1(){
 }
 
 fun opcio2(glossari: MutableMap<Int, String>) {
-    val novaDef = readWord("Escriu la nova entrada per afegir:","")
+    val novaDef = readWord("Escriu la nova entrada per afegir:", "")
     val novaClau = if (glossari.isEmpty()) 1 else glossari.keys.max()!! + 1
     glossari[novaClau] = novaDef
     println("S'ha afegit l'entrada amb clau $novaClau.")
@@ -77,7 +83,7 @@ fun opcio2(glossari: MutableMap<Int, String>) {
 fun opcio3(glossari: MutableMap<Int, String>) {
     val clau = readInt("Escriu el número de l'entrada a modificar:", "Ha de ser un número")
     if (glossari.containsKey(clau)) {
-        val novaDef = readWord("Escriu el nou text de l’entrada:","")
+        val novaDef = readWord("Escriu el nou text de l’entrada:", "")
         glossari[clau] = novaDef
         println("Entrada modificada correctament.")
     } else {

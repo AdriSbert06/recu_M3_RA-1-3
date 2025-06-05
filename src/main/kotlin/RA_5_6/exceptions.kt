@@ -1,5 +1,8 @@
 package RA_5_6
 
+import Utils.readInt
+import Utils.readSentence
+
 fun main(){
     //llegirNumero()
     //dividirNums()
@@ -67,7 +70,7 @@ fun validarMail(correu: String): Boolean {
 
 fun inputMail(){
     try {
-        val correu = readSentence("Escriu el teu correu","")
+        val correu = readSentence("Escriu el teu correu", "")
         if (!validarMail(correu)){
             throw ValidarCorreu("No es pot validar el correu")
         }
