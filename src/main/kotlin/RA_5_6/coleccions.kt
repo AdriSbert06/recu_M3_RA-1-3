@@ -3,6 +3,12 @@ package RA_5_6
 class RepetitException (message: String): Exception(message)
 class ForaRangException (message: String): Exception(message)
 
+/* Aquesta es una altre forma de fer una excepció
+ class RepetitException : Exception {
+ constructor(): this ("Missatge d'error") { }
+ constructor(missatge: String): super(missatge) { }
+ }
+ */
 
 class LlistaDeNoms {
     private val llista: ArrayList<String> = arrayListOf()

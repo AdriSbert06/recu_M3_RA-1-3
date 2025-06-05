@@ -3,7 +3,14 @@ package RA_5_6
 fun main(){
     //llegirNumero()
     //dividirNums()
-    inputMail()
+    //inputMail()
+
+    //Aquesta es per la inversa
+    print("Escriu una frase: ")
+    val frase = readLine() ?: ""
+    val resultat = invertirSenseReversed(frase)
+    println("Frase invertida: $resultat")
+
 
 }
 // 1
@@ -70,3 +77,26 @@ fun inputMail(){
         e.printStackTrace()
     }
 }
+
+//Retornar una frase amb el .reversed()
+fun invertirAmbReversed(frase: String): String {
+    return frase.reversed()
+}
+
+//Sense el .reversed()
+fun invertirSenseReversed(frase: String): String {
+    var invertida = ""
+    for (i in frase.length - 1 downTo 0) {
+        invertida += frase[i]
+    }
+    return invertida
+}
+//Amb stringBuilder
+fun invertirSenseReversed2(frase: String): String {
+    val resultat = StringBuilder()
+    for (i in frase.length - 1 downTo 0) {
+        resultat.append(frase[i])
+    }
+    return resultat.toString()
+}
+
